@@ -1,0 +1,79 @@
+// main: ../../../css/styles.scss
+
+ul.accordion {
+    list-style: none;
+    padding   : 0;
+
+    .inner {
+        overflow: hidden;
+        display : none;
+        padding : 0 15px;
+
+        &.show {
+            /*display: block;*/
+        }
+    }
+
+    li {
+        margin       : .5em 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+
+        a.toggle {
+            width         : 100%;
+            display       : block;
+            padding       : 15px;
+            transition    : background .3s ease;
+            color         : rgba(255,255,255,0.7);
+            font-size     : 1.8rem;
+            line-height   : 2.4rem;
+            font-weight   : 500;
+            font-family   : $heading-font-family;
+            padding-left  : 50px;
+            position      : relative;
+            white-space   : normal;
+            box-sizing    : border-box;
+            vertical-align: top;
+
+            &:before {
+                vertical-align: top;
+                content       : '\f138';
+                font-family   : 'Font Awesome 5 Pro';
+                font-size     : 1.8rem;
+                line-height   : 2.3rem;
+                font-weight   : 300;
+                display       : inline-block;
+                @include transition(.2s, 0s);
+                width         : 18px;
+                height        : 18px;
+                position      : absolute;
+                top           : 15px;
+                left          : 15px;
+                @include transform(rotate(0deg));
+            }
+
+            &.active {
+                &:before {
+                    @include transform(rotate(90deg));
+                    color: #fff;
+                }
+            }
+
+            &:hover {}
+        }
+
+        .inner {
+            padding-bottom: 10px;
+            padding-left  : 50px;
+
+            p:first-child {
+                margin-top: 0;
+                color: rgba(255,255,255,0.6);
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+// main: ../../css/styles.scss
+
+body {
+    // LIGHT MODE
+    --bkg-color              : #000000;
+    --text-color             : rgba(255,255,255,0.8);
+    --heading-color          : #ffffff;
+    --site-logo              : url("/img/site-logo.png");
+    --primary-color          : #323232;
+    --secondary-color        : #EC4997;
+    --grey-20-color          : #EAEAEA;
+    --grey-40-color          : #999999;
+    --grey-60-color          : #666666;
+    --grey-80-color          : #333333;
+    --fancybox-content-bg : #000000;
+}
+
+$bkg-color: var(--bkg-color);
+$font-awesome-font: 'Font Awesome 6 Pro';
+
+/*
+** Masthead Height
+*/
+
+$masthead-height: 140px;
+
+
+$menu-system-height: 35px;
+$logo-height: 135px;
+
+/*
+** Hero
+*/
+$hero_slider_min_height                   : 350px;
+$hero_slider_height                       : 70vh;
+$hero_height                              : 70vh;
+$hero_slider_height_small                 : 45vh;
+$hero_height_small                        : 45vh;
+$hero_slider_height_full                  : 90vh;
+$hero_height_full                         : 90vh;
+$hero_slider_height_full_mobile           : 90vh;
+$hero_height_full_mobile                  : 90vh;
+
+$breadcrumb-background-color              : #ffffff;
+$breadcrumb-border-color  : #cccccc;
+/*
+** Colors
+*/
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$accent-color: var(--accent-color);
+$accent-alternate-color: var(--accent-alternate-color);
+$light-grey-color: var(--grey-20-color);
+$grey-color : var(--grey-40-color);
+$dark-grey-color: #191717;
+$masthead-top-bar-bg-color: $secondary-color;
+$masthead-top-bar-text-color: #fff;
+$masthead-bg-color: $primary-color;
+$masthead-menu-bg-color: #fff;
+
+/*
+** Footer
+*/
+$footer-bg-color: var(--secondary-color);
+
+/*
+** Hamburger
+*/
+$hamburger_line_thickness: 3px;
+$hamburger_color: var(--grey-80-color);
+$hamburger_active_color: var(--grey-80-color);
+/*
+** Hamburger Menu Overlay
+*/
+$mobile_menu_overlay_background: #fff;
+$mobile_menu_overlay_text_color: #535353;
+$mobile_menu_overlay_text_hover_color: $primary-color;
+$mobile_menu_overlay_text_hover_line_color: $primary-color;
+$mmenu_navbars_top_height: 40px;
+$mobile_menu_title_background_color: $primary-color;
+/*
+** Typography
+*/
+$heading-color: var(--heading-color);
+$text-color: var(--text-color);
+$base-font-size: 1.8rem;
+$base-font-line-height: 1.2;
+$base-font-family: brandon-grotesque, sans-serif;
+$base-font-weight: 300;
+$heading-font-line-height: 1.3;
+$heading-font-family: brandon-grotesque, sans-serif;
+$heading-font-weight: 600;
+$page-title-font: brandon-grotesque, sans-serif;
+$menu-font: brandon-grotesque, sans-serif;
+
+$hero-heading-font-family: COCOGOOSE DemiBold;
+
+
+
+$add-to-cart-button-bg-color : $primary-color;
+$add-to-cart-button-text-color: #ffffff;

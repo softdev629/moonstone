@@ -1,0 +1,636 @@
+<style type="text/css">
+  .facebook-feed-user-root-container {
+    display: none;
+}
+</style>
+<?php
+$about_content=$this->content->get_static_page_by_id(7);
+$cookie_name = "anyname";
+$cookie_value = "anycontent";
+if (isset($_COOKIE[$cookie_name]) && !empty($_COOKIE[$cookie_name])) {
+    $my_cookie = '1';
+}
+else {
+    $my_cookie = '0';
+}
+$currPage = array('10', '11');
+?>
+<?php if($my_cookie == '0' && !in_array($currentPage, $currPage)):  ?>
+<div class="alert alert-warning alert-dismissible fade show cookiepop" role="alert">
+  <h5 class="modal-title">Cookies Policy</h5>
+  <p>At Moonstone Plates, we want to ensure that your visit to our site is smooth, reliable and as useful to you as possible. To help us do this, we use cookies.</p>
+  <button type="button" class="close cbtn" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="btn-sec">
+  <a href="" onClick="SetCookie('anyname','anycontent','-1')"><button type="submit" class="brd-btn">Accept</button></a>
+  <a href="<?php echo base_url() . 'cookies-policy' ; ?>"><button type="submit" class="brd-btn">View Cookie Policy</button></a>
+  <a href="<?php echo base_url() . 'web-policy' ; ?>"><button type="submit" class="brd-btn">View Privacy Policy</button></a>
+  </div>
+</div>
+<script>
+    function SetCookie(c_name,value,expiredays)
+    {
+        var exdate=new Date()
+        exdate.setDate(exdate.getDate()+expiredays)
+        document.cookie=c_name+ "=" +escape(value)+
+        ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+        location.reload()
+    }
+    </script>
+<?php endif; ?>
+<style>
+.error{width:100%; text-align: left; color: red;}
+</style>
+<div class="bottom-feed-section">
+<div class="bottom-footer-section">
+<footer class="footer text-center">
+   <div class="footer-top">
+      <div class="row">
+         <div class="col-md-4 col-sm-12 wow fadeInUp foot-intro" data-wow-delay="0.2s">
+            <div class="f-about">
+               <div class="f-about-logo"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/logo-black.svg"></div>
+               <div class="f-about-cont"><?php echo $this->common->GetshortString($about_content->page_description,209);?></div>
+               <a href="<?php echo base_url(); ?>about-us">Readmore</a>
+            </div>
+         </div>
+         <div class="col-md-4 col-sm-12 r-line wow fadeInUp" data-wow-delay="0.3s">
+            <div class="f-about-links">
+               <h2>About Us</h2>
+               <ul>
+                  <li><a href="<?php echo base_url(); ?>buy">Buy</a></li>
+                  <li><a href="<?php echo base_url(); ?>sell">Sell</a></li>
+                  <li><a href="<?php echo base_url(); ?>help-services">help & Services</a></li>
+                  <li><a href="<?php echo base_url(); ?>contactus">Contact us</a></li>
+               </ul>
+               <div class="cnda-logo" style="margin-top: 65px;margin-left: -25px;">
+                <a href="http://www.cnda.co.uk/" target="_blank">
+                 <img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/cnda-logo.gif">
+               </a>
+               </div>
+            </div>
+         </div>
+         <!--
+         <div class="col-md-3 col-sm-12 r-line wow fadeInUp" data-wow-delay="0.4s">
+            <div class="f-about-links">
+               <!-- <div class='sk-ww-facebook-feed' data-embed-id='48712'></div><script src='https://www.sociablekit.com/app/embed/facebook-feed/widget.js' async defer></script> -->
+               <!--
+                <h2>recent posts</h2>
+                <div class="f-post-sec">
+                  <div class="f-post">
+                     <div class="f-post-left"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/fp1.png"></div>
+                     <div class="f-post-right">
+                        <div class="f-post-right-con">A Week Long South American Adventures</div>
+                        <div class="f-post-right-time-sec"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/time-icon.png"> June 26. 2020</div>
+                     </div>
+                  </div>
+                  <div class="f-post">
+                     <div class="f-post-left"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/fp2.png"></div>
+                     <div class="f-post-right">
+                        <div class="f-post-right-con">A Week Long South American Adventures</div>
+                        <div class="f-post-right-time-sec"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/time-icon.png"> June 26. 2020</div>
+                     </div>
+                  </div>
+                  <div class="f-post bb-none">
+                     <div class="f-post-left"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/fp3.png"></div>
+                     <div class="f-post-right">
+                        <div class="f-post-right-con">A Week Long South American Adventures</div>
+                        <div class="f-post-right-time-sec"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/time-icon.png"> June 26. 2020</div>
+                     </div>
+                  </div>
+                </div>  
+            </div>
+         </div>
+        -->
+         <div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="follow-us-sec">
+               <h2>Follow us</h2>
+               <div class="follow-us-sec-con">Don’t forgot to keep in touch by following us via social media.</div>
+               <div class="follow-social-sec">
+                  <a href="https://www.linkedin.com/company/moonstone-plates-ltd"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/l-icon.jpg" target="_blank"></a>
+                  <a href="https://www.facebook.com/moonstoneplates" target="_blank"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/f-icon.png"></a>
+                  <a href="https://www.instagram.com/moonstoneplates/" target="_blank"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/i-icon.jpg"></a>
+                  <a href="https://vm.tiktok.com/ZMRnrK6Vp/" target="_blank"><img src="<?php echo HTTP_ASSETS_PATH_CLIENT; ?>images/tik-tok.png"></a>
+               </div>
+               <div class="follow-subscribe-sec">
+                  <div class="follow-subscribe-sec-title">Subscribe to my newsletter</div>
+                  <div class="newslatter-process">&nbsp;</div> 
+                  <div id="newslatter-msgquot">You have successfully registered with us.</div>
+                  <form id="FormNewslatter" class="newslatter" name="FormNewslatter" action="#" method="POST" onsubmit="return chkNewslatter()">
+                     <input name="texytEmail" id="textEmail" placeholder="Enter your email address"  type="text" class="form-control" onfocus="clearText(this.id,'','Please enter your email','form-control focus'); clearText(this.id,'','Please enter your valid email','form-control focus');" onblur="FillText(this.id,'','form-control');duplicate_email(this.value);">
+                     <span class="error" id="lbl_user_email"></span>
+                     <button class="subscribe" id="btn-submit">Subscribe</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="footer-bottom">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="copyright">Copyright© 2020 moonstoneplate. All rights reserved. </div>
+            <div class="footer-link">
+              <a href="<?php echo base_url(); ?>terms-condition">Terms  & conditions</a>  |  <a href="<?php echo base_url(); ?>privacy-policy">privacy policy</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+</div>
+</div>
+<div class="modal bd-example-modal-lg" id="numberModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cherished plates</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="cart-popup" tabindex="-1" role="dialog" aria-labelledby="CartModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Proceed to Checkout</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body">
+         <div id="txtimg"></div>
+         </div>
+          <div class="modal-footer" id="add_cart_button">
+            <a href="<?php echo base_url();?>buy" class="btn btn-styled btn-base-1">
+               Continue Shopping
+            </a>
+           <a href="<?php echo base_url();?>cart" id="add_cart_link" class="btn btn-styled btn-base-1">
+            Continue To Checkout
+           </a>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal login" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="text-center m-t-20">
+            <a href="index.html" class="logo">
+                <img src="<?php echo HTTP_ASSETS_PATH_CLIENT;?>images/logo-black.svg" alt="logo">
+            </a>
+        </div>
+        <div class="m-t-30 m-b-20">
+              <form class="form-default  m-t-20" action="<?php echo base_url(); ?>login-check" id="login-form">
+                  <div class="form-group ">
+                      <div class="col-xs-12">
+                          <input class="form-control" type="text" name="email" id="email" required="" placeholder="Email">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="col-xs-12">
+                          <input class="form-control" type="password" name="password" id="password" required="" placeholder="Password">
+                      </div>
+                  </div>
+                  <div class="form-group text-center m-t-30">
+                      <div class="col-xs-12">  
+						          <a href="" data-toggle="modal" data-target="#registerModal" style="color: white;" class="btn btn-styled btn-base-1">Sign up</a>
+                      <input type="submit" name="submit" class="btn btn-styled btn-base-1" value="Log In">
+                      </div>
+                  </div>
+                  <div class="form-group m-t-30 m-b-0">
+                      <div class="col-sm-12 text-center">
+                          <a href="" data-toggle="modal" data-target="#forgotModal" class="text-muted forgot-pass"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
+                      </div>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal addvertise" id="advertiseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="text-center m-t-20">
+            <a href="index.html" class="logo">
+                <img src="<?php echo HTTP_ASSETS_PATH_CLIENT;?>images/logo-black.svg" alt="logo">
+            </a>
+        </div>
+        <div class="m-t-30 m-b-20">
+              <h3>Sign up for a Moonstone Plates Account.</h3>
+              <div class="form-group text-center m-t-30">
+                  <div class="col-xs-12">
+                    <a data-toggle="modal" id="add_sign_up_modal" style="color: white;margin-bottom: 10px;" class="btn btn-styled btn-base-1">Sign up</a>
+                    <a data-toggle="modal" id="all_login_modal" style="color: white;margin-bottom: 10px;" class="btn btn-styled btn-base-1">Already have one</a>
+                    <br />
+                    <a data-toggle="modal" id="add_login_modal" style="color: white;" class="btn btn-styled btn-base-1">Log In</a>
+                    <a data-toggle="modal" id="not_modal" aria-label="Close" style="color: white;" class="btn btn-styled btn-base-1">Not Now</a>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal register" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+	
+	<div class="modal-header">
+        <h5 class="modal-title" style="color: black; margin-top: 0; ">Sign Up</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	  
+	  
+      <div class="modal-body">
+       
+        
+        <div class="m-b-20">
+              <form class="form-default" action="<?php echo base_url(); ?>user-register" id="register-form">
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <input class="form-control" type="text" name="name" id="name" required="" placeholder="Name">
+                      </div>
+					  <div class="col-md-6 mb-3">
+                          <input class="form-control" type="text" name="lastname" id="lastname" required="" placeholder="Last name">
+                      </div>
+					  <div class="col-md-6 mb-3">
+                          <input class="form-control" type="text" name="phone_number" id="phone_number" required="" placeholder="Phone number">
+                      </div>
+					  <div class="col-md-6 mb-3">
+                          <input class="form-control" type="text" name="address" id="address" required="" placeholder="Address">
+                      </div>
+					  <div class="col-md-6 mb-3">
+                              <select class="form-control custome-control" name="country" id="country" required="">
+                                  <option value="GB">United Kingdom</option>
+                              </select>
+                      </div>
+					  <div class="col-md-6 mb-3 ">
+                          <input class="form-control" type="text" name="city" id="city" required="" placeholder="City">
+                      </div>
+					  <div class="col-md-6 mb-3">
+                          <input class="form-control" type="text" name="zip" id="zip" required="" placeholder="Postal code">
+                      </div>
+					  <div class="col-md-6 mb-3">
+                          <input class="form-control" type="email" name="email" id="email" required="" placeholder="Email">
+                      </div>
+					  <div class="col-md-6 mb-3">
+                          <input class="form-control" type="password" name="password" id="password" required="" placeholder="Password">
+                      </div>
+					  <div class="col-md-6 mb-3">
+                          <input class="form-control" type="password" name="confirm_password" id="confirm_password" required="" placeholder="Confirm password">
+                      </div>
+                  </div>
+                  
+                
+                  <div class="form-group text-center m-t-30">
+                      <div class="col-xs-12">
+							
+                          <input type="submit" name="submit" class="btn btn-styled btn-base-1" value="Submit">
+						  
+						  <button type="button" class="btn btn-styled btn-base-1"><a style="text-decoration: none; color: white;" href="javascript:void(0);" data-dismiss="modal" aria-label="Close">Cancel</a></button>
+                      </div>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal login" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="text-center m-t-20">
+            <a href="index.html" class="logo">
+                <img src="<?php echo HTTP_ASSETS_PATH_CLIENT;?>images/logo-black.svg" alt="logo">
+            </a>
+        </div>
+        <div class="m-t-30 m-b-20">
+              <form class="form-default  m-t-20" action="<?php echo base_url(); ?>forgot-password" id="forgot-form">
+                  <div class="form-group ">
+                      <div class="col-xs-12">
+                          <input class="form-control" type="text" name="email" id="email" required="" placeholder="Email">
+                      </div>
+                  </div>
+                  <div class="form-group text-center m-t-30">
+                      <div class="col-xs-12">
+                          <input type="submit" name="submit" class="btn btn-styled btn-base-1" value="Submit">
+                      </div>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal bd-example-modal-lg" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Offer for <span id="offer_number"></span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="m-b-20">
+              <form class="form-default  m-t-20" action="<?php echo base_url(); ?>offer-check" id="offer-form">
+                 <input type="hidden" name="offer_plate_id" id="offer_plate_id">
+                <input type="hidden" name="offer_plate_number" id="offer_plate_number">
+                  <div class="form-group ">
+                      <div class="col-xs-12">
+                          <input class="form-control" type="text" name="subject" id="offer_subject" required="" placeholder="Subject">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="col-xs-12">
+                          <textarea class="form-control" name="offer_message" id="offer_message" placeholder="Message" required="required"></textarea>
+                      </div>
+                  </div>
+                  <div class="form-group text-center m-t-30">
+                      <div class="col-xs-12">
+                          <input type="submit" name="submit" class="btn btn-styled btn-base-1" value="Send">
+                      </div>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal bd-example-modal-lg" id="enquireModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Enquire for <span id="enquire_number"></span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="m-b-20">
+              <form class="form-default m-t-20" action="<?php echo base_url(); ?>enquiry-check" id="enquiry-form">
+                <input type="hidden" name="enquiry_plate_id" id="enquiry_plate_id">
+                <input type="hidden" name="enquiry_plate_number" id="enquiry_plate_number">
+                  <div class="form-group ">
+                      <div class="col-xs-12">
+                          <input class="form-control" type="text" name="subject" id="enquire_subject" required="" placeholder="Subject">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="col-xs-12">
+                          <textarea class="form-control" name="enquire_message" id="enquire_message" placeholder="Message"></textarea>
+                      </div>
+                  </div>
+                  <div class="form-group text-center m-t-30">
+                      <div class="col-xs-12">
+                          <input type="submit" name="submit" class="btn btn-styled btn-base-1" value="Send">
+                      </div>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="packageModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Promotional Package <span id="package_name"></span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="p-3">
+              <form class="form-default" action="<?php echo base_url(); ?>package-submit" id="package-inquiry-form">
+                <input type="hidden" name="package_id" id="package_id">
+                  
+				  <div class="row mb-3">
+                      <div class="col-6">
+                          <input class="form-control" type="text" name="promotion_number" id="promotion_number" required="" placeholder="Number plate">
+                      </div>
+					  <div class="col-6">
+                          <input class="form-control" type="text" name="promotion_name" id="promotion_name" required="" placeholder="Name">
+                      </div>
+                  </div>
+                 
+                  <div class="row mb-3">
+                      <div class="col-6">
+                          <input class="form-control" type="text" name="promotion_email" id="promotion_email" required="" placeholder="Email">
+                      </div>
+					  <div class="col-6">
+                          <input class="form-control" type="text" name="promotion_contact_number" id="promotion_contact_number" required="" placeholder="Contact number">
+                      </div>
+                  </div>
+				  
+				  
+                 
+                  
+				  
+				  <div class="row mt-3">
+					<div class="col-12">
+						<div class="form-group">
+							<div class="form-check" style="background: #f2f2f2;padding: 12px 15px;border-radius: 4px;">
+							  <input class="form-check-input" style="margin-left:0;" type="radio" id="gridCheck" checked="">
+							  <label class="form-check-label" style="color: #000; text-align: left; line-height: 14px;" for="gridCheck">
+								I would like to promote my number plate via the Moonstone website and social media channels.
+							  </label>
+							</div>
+						  </div>
+					</div>
+				  </div>
+				  
+                  <div class="form-group text-center">
+                      <div class="col-xs-12">
+                          <input type="submit" name="submit" class="btn btn-styled btn-base-1" value="Send">
+                      </div>
+                  </div>
+				  
+				  
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal bd-example-modal-lg" id="orderDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$( document ).ready(function() {
+    $(".forgot-pass, .user-register").click(function() {
+        $('#loginModal').modal('hide');
+    });
+    $('#login-form').submit(function () {
+            var form = $("#login-form");
+            if (form.valid())
+            {
+                $.ajax({
+                    type: "POST",
+                    url: $(this).attr("action"),
+                    data: new FormData(this),
+                    async: true,
+                    dataType: "json",
+                    contentType: false,
+                    processData: false,
+                    cache: true,
+                    enctype: 'multipart/form-data',
+                    success: function (result)
+                    { console.log('status',result['status']);
+                        if (result.status == 1)
+                        {
+                            $.bootstrapGrowl(result.msg, {type: 'success', delay: 4000});
+                            setTimeout(function() {
+                                location.reload();
+                            }, 1000);
+                        }
+                        else
+                        {
+                            $.bootstrapGrowl(result.msg, {type: 'danger', delay: 4000});
+                        }
+                    },
+                    error: function (error)
+                    {
+                        $('#AjaxLoaderDiv').fadeOut('slow');
+                        $.bootstrapGrowl("Internal server error !", {type: 'danger', delay: 4000});
+                    }
+                });
+            }
+            return false;
+    });
+
+    // Login
+    $('#register-form').submit(function () {
+            var form = $("#register-form");
+            if (form.valid())
+            {
+                $.ajax({
+                    type: "POST",
+                    url: $(this).attr("action"),
+                    data: new FormData(this),
+                    async: true,
+                    dataType: "json",
+                    contentType: false,
+                    processData: false,
+                    cache: true,
+                    enctype: 'multipart/form-data',
+                    success: function (result)
+                    { console.log('status',result['status']);
+                        if (result.status == 1)
+                        {
+                            $.bootstrapGrowl(result.msg, {type: 'success', delay: 4000});
+                            setTimeout(function() {
+                                location.reload();
+                            }, 1000);
+                        }
+                        else
+                        {
+                            $.bootstrapGrowl(result.msg, {type: 'danger', delay: 4000});
+                        }
+                    },
+                    error: function (error)
+                    {
+                        $('#AjaxLoaderDiv').fadeOut('slow');
+                        $.bootstrapGrowl("Internal server error !", {type: 'danger', delay: 4000});
+                    }
+                });
+            }
+            return false;
+    });
+
+    $('#forgot-form').submit(function () {
+            var form = $("#forgot-form");
+            if (form.valid())
+            {
+                $.ajax({
+                    type: "POST",
+                    url: $(this).attr("action"),
+                    data: new FormData(this),
+                    async: true,
+                    dataType: "json",
+                    contentType: false,
+                    processData: false,
+                    cache: true,
+                    enctype: 'multipart/form-data',
+                    success: function (result)
+                    { console.log('status',result['status']);
+                        if (result.status == 1)
+                        {
+                            $.bootstrapGrowl(result.msg, {type: 'success', delay: 4000});
+                            setTimeout(function() {
+                                location.reload();
+                            }, 1000);
+                        }
+                        else
+                        {
+                            $.bootstrapGrowl(result.msg, {type: 'danger', delay: 4000});
+                        }
+                    },
+                    error: function (error)
+                    {
+                        $('#AjaxLoaderDiv').fadeOut('slow');
+                        $.bootstrapGrowl("Internal server error !", {type: 'danger', delay: 4000});
+                    }
+                });
+            }
+            return false;
+    });
+});
+$('#faqSearch').focus(function() {
+    //var div = $('.search-dropdown').fadeIn('fast');
+    $(document).bind('focusin.search-dropdown click.search-dropdown',function(e) {
+        if ($(e.target).closest('.search-dropdown, #faqSearch').length) return;
+        $(document).unbind('.search-dropdown');
+        $('.search-dropdown').fadeOut('fast');
+    });
+});
+
+$("#faqSearch").on("keyup", function() {
+    //$('.insurer_list strong').hide();
+    var div = $('.search-dropdown').fadeIn('fast');
+    var value = $(this).val().toLowerCase();
+    if(value==""){
+        $('.search-dropdown').fadeOut('fast');
+    }
+    $(".search-dropdown li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+});
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=3479740382070509&autoLogAppEvents=1" nonce="XHStlzOu"></script>
+</body>
+</html>

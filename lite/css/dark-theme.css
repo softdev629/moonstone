@@ -1,0 +1,15 @@
+.darktheme .topbar{background: #000;}
+.darktheme .mainMenu a, .darktheme .mainMenu a:visited{color: #fff;}
+.darktheme .black {color: #ffffff !important;}
+.darktheme .mainMenu a:hover{background: transparent;}
+.darktheme .darkbg{background: #000000; padding-bottom: 0;}
+.darktheme .h-top-title h3{color: #ffffff}
+.darktheme .h-top-title p{color: #ffffff}
+.darktheme .page-wrapper{padding-bottom: 0;}
+.darktheme .bottom-section h2{margin-top: 60px;}
+.darktheme .left-sidebar{background: #0e0e0e!important;}
+.darktheme .right-title h3{color: #fff; border-left: solid 5px #fff;}
+.darktheme .numbers-bg .number{color: #fff;}
+.darktheme .numbers-bg .numbers-right{color: #fff;}
+.darktheme .numbers-bg .number{background: url("../../assets/images/number-bg-hover.svg") no-repeat; background-size: 100%; background-repeat: no-repeat;}
+.darktheme .number-plates-detail-section-right{color: #fff;}

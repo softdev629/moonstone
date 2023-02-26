@@ -1,0 +1,15 @@
+// main: ../../css/styles.scss
+@charset "UTF-8";
+@import '../global/font-import';
+@import "../global/variables";
+@import '../global/mixins';
+
+@import 'components/global';
+@import 'components/typography';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/slick-defaults';
+@import 'components/slides';
+@import 'components/blog';
+@import 'components/forms';
+@import 'components/accordion';

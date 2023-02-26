@@ -1,0 +1,336 @@
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Search_model extends CI_Model {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->database();
+    }
+    function get_cherished_plates_by_search($search,$type='')
+    {   
+    	$this->load->model('Common_function_model','common');
+        $number_data=[];
+        $this->db->select('id,number,plate_id,price');
+        $this->db->from('cherished_plates');
+        $this->db->where('status',1);
+        $this->db->order_by("id");
+        $query=$this->db->get();
+        $number_data=$query->result_array();
+        
+        $filter_data=array();
+        $number_count=0;
+        if($search!=""){
+        	$search_array=$this->common->get_search_array($search);
+        	// echo "<pre>";
+        	// print_r($search_array); die();
+        	foreach ($search_array as $key => $search_val) {
+        		$resetLoop = true;
+        		foreach ($number_data as $nkey => $number_value){
+
+	                if(strpos($number_value['number'],strtoupper($search_val))!== FALSE && $number_count<12 && $resetLoop){
+	                  $filter_number['number']=$number_value['number'];
+	                  $filter_number['price']=$number_value['price'];
+	                  $filter_number['plate_id']=$number_value['plate_id'];
+	                  $filter_number['plate_type']=1;
+	                  if(!isset($filter_data[$number_value['number']])){
+	                  	  $filter_data[$number_value['number']]=$filter_number;
+		                  $number_count++;
+		                  $resetLoop=false;
+	                  }
+	                  
+	                }elseif(strpos($number_value['number'],strtoupper($search_val))!== FALSE){
+	                    if($type!=''){
+	                    $filter_number['number']=$number_value['number'];
+	                    $filter_number['price']=$number_value['price'];
+	                    $filter_number['plate_id']=$number_value['plate_id'];
+	                    $filter_number['plate_type']=1;
+	                    if(!isset($filter_data[$number_value['number']])){
+	                    $filter_data[$number_value['number']]=$filter_number;
+	                	}
+	                    }
+	                }
+	                
+            	}
+        	}
+
+        	if($number_count<12){
+
+        		while (strlen($search)>0) {
+
+	        		$resetLoop = true;
+	        		foreach ($number_data as $nkey => $number_value){
+		                if(strpos($number_value['number'],strtoupper($search))!== FALSE && $number_count<12 && $resetLoop){
+		                  $filter_number['number']=$number_value['number'];
+		                  $filter_number['price']=$number_value['price'];
+		                  $filter_number['plate_id']=$number_value['plate_id'];
+		                  $filter_number['plate_type']=1;
+		                  if(!isset($filter_data[$number_value['number']])){
+			                  $filter_data[$number_value['number']]=$filter_number;
+			                  $number_count++;
+			                  //$resetLoop=false;
+		              	  }
+		                }elseif(strpos($number_value['number'],strtoupper($search))!== FALSE){
+		                    if($type!=''){
+		                    $filter_number['number']=$number_value['number'];
+		                    $filter_number['price']=$number_value['price'];
+		                    $filter_number['plate_id']=$number_value['plate_id'];
+		                    $filter_number['plate_type']=1;
+			                    if(!isset($filter_data[$number_value['number']])){
+			                    	$filter_data[$number_value['number']]=$filter_number;
+			                	}
+		                    }
+		                }
+	            	}
+	            	$search=substr_replace($search ,"", -1);
+        		}
+
+        	}
+        	
+        }else{
+            foreach ($number_data as $nkey => $number_value) {
+                if($number_count<99){
+                  $filter_number['number']=$number_value['number'];
+                  $filter_number['price']=$number_value['price'];
+                  $filter_number['plate_id']=$number_value['plate_id'];
+                  $filter_number['plate_type']=1;
+                  if(!isset($filter_data[$number_value['number']])){
+	                  $filter_data[$number_value['number']]=$filter_number;
+	                  $number_count++;
+              	  }
+                }
+            }
+        }
+        return $filter_data;
+    }
+
+    function get_prefix_plates_by_search($search,$type='')
+    {   
+    	$this->load->model('Common_function_model','common');
+        $number_data=[];
+        $this->db->select('id,number,plate_id,price');
+        $this->db->from('prefix_plates');
+        $this->db->where('status',1);
+        $this->db->order_by("id");
+        $query=$this->db->get();
+        $number_data=$query->result_array();
+        
+        $filter_data=array();
+        $number_count=0;
+        if($search!=""){
+        	$search_array=$this->common->get_search_array($search);
+        	// echo "<pre>";
+        	// print_r($search_array); die();
+        	foreach ($search_array as $key => $search_val) {
+        		$resetLoop = true;
+        		foreach ($number_data as $nkey => $number_value){
+
+	                if(strpos($number_value['number'],strtoupper($search_val))!== FALSE && $number_count<12 && $resetLoop){
+	                  $filter_number['number']=$number_value['number'];
+	                  $filter_number['price']=$number_value['price'];
+	                  $filter_number['plate_id']=$number_value['plate_id'];
+	                  $filter_number['plate_type']=2;
+	                  if(!isset($filter_data[$number_value['number']])){
+	                  	  $filter_data[$number_value['number']]=$filter_number;
+		                  $number_count++;
+		                  $resetLoop=false;
+	                  }
+	                  
+	                }elseif(strpos($number_value['number'],strtoupper($search_val))!== FALSE){
+	                    if($type!=''){
+	                    $filter_number['number']=$number_value['number'];
+	                    $filter_number['price']=$number_value['price'];
+	                    $filter_number['plate_id']=$number_value['plate_id'];
+	                    $filter_number['plate_type']=2;
+	                    if(!isset($filter_data[$number_value['number']])){
+	                    $filter_data[$number_value['number']]=$filter_number;
+	                	}
+	                    }
+	                }
+	                
+            	}
+        	}
+
+        	if($number_count<12){
+        		while (strlen($search)>0) {
+	        		$resetLoop = true;
+	        		foreach ($number_data as $nkey => $number_value){
+		                if(strpos($number_value['number'],strtoupper($search))!== FALSE && $number_count<12 && $resetLoop){
+		                  $filter_number['number']=$number_value['number'];
+		                  $filter_number['price']=$number_value['price'];
+		                  $filter_number['plate_id']=$number_value['plate_id'];
+		                  $filter_number['plate_type']=2;
+		                  if(!isset($filter_data[$number_value['number']])){
+			                  $filter_data[$number_value['number']]=$filter_number;
+			                  $number_count++;
+			                  //$resetLoop=false;
+		              	  }
+		                }elseif(strpos($number_value['number'],strtoupper($search))!== FALSE){
+		                    if($type!=''){
+		                    $filter_number['number']=$number_value['number'];
+		                    $filter_number['price']=$number_value['price'];
+		                    $filter_number['plate_id']=$number_value['plate_id'];
+		                    $filter_number['plate_type']=2;
+			                    if(!isset($filter_data[$number_value['number']])){
+			                    	$filter_data[$number_value['number']]=$filter_number;
+			                	}
+		                    }
+		                }
+	            	}
+	            	$search=substr_replace($search ,"", -1);
+        		}
+        	}
+        	
+        }else{
+            foreach ($number_data as $nkey => $number_value) {
+                if($number_count<99){
+                  $filter_number['number']=$number_value['number'];
+                  $filter_number['price']=$number_value['price'];
+                  $filter_number['plate_id']=$number_value['plate_id'];
+                  $filter_number['plate_type']=2;
+                  if(!isset($filter_data[$number_value['number']])){
+	                  $filter_data[$number_value['number']]=$filter_number;
+	                  $number_count++;
+              	  }
+                }
+            }
+        }
+        return $filter_data;
+    }
+
+    function get_new_plates_by_search($search,$type='')
+    {   
+    	$this->load->model('Common_function_model','common');
+        $number_data=[];
+        $this->db->select('id,number,plate_id,price');
+        $this->db->from('new_plates');
+        $this->db->where('status',1);
+        $this->db->order_by("id");
+        $query=$this->db->get();
+        $number_data=$query->result_array();
+        
+        $filter_data=array();
+        $number_count=0;
+        if($search!=""){
+        	$search_array=$this->common->get_search_array($search);
+        	// echo "<pre>";
+        	// print_r($search_array); die();
+        	foreach ($search_array as $key => $search_val) {
+        		$resetLoop = true;
+        		foreach ($number_data as $nkey => $number_value){
+
+	                if(strpos($number_value['number'],strtoupper($search_val))!== FALSE && $number_count<12 && $resetLoop){
+	                  $filter_number['number']=$number_value['number'];
+	                  $filter_number['price']=$number_value['price'];
+	                  $filter_number['plate_id']=$number_value['plate_id'];
+	                  $filter_number['plate_type']=3;
+	                  if(!isset($filter_data[$number_value['number']])){
+	                  	  $filter_data[$number_value['number']]=$filter_number;
+		                  $number_count++;
+		                  $resetLoop=false;
+	                  }
+	                  
+	                }elseif(strpos($number_value['number'],strtoupper($search_val))!== FALSE){
+	                    if($type!=''){
+	                    $filter_number['number']=$number_value['number'];
+	                    $filter_number['price']=$number_value['price'];
+	                    $filter_number['plate_id']=$number_value['plate_id'];
+	                    $filter_number['plate_type']=3;
+	                    if(!isset($filter_data[$number_value['number']])){
+	                    $filter_data[$number_value['number']]=$filter_number;
+	                	}
+	                    }
+	                }
+	                
+            	}
+        	}
+
+        	if($number_count<12){
+        		while (strlen($search)>0) {
+	        		$resetLoop = true;
+	        		foreach ($number_data as $nkey => $number_value){
+		                if(strpos($number_value['number'],strtoupper($search))!== FALSE && $number_count<12 && $resetLoop){
+		                  $filter_number['number']=$number_value['number'];
+		                  $filter_number['price']=$number_value['price'];
+		                  $filter_number['plate_id']=$number_value['plate_id'];
+		                  $filter_number['plate_type']=3;
+		                  if(!isset($filter_data[$number_value['number']])){
+			                  $filter_data[$number_value['number']]=$filter_number;
+			                  $number_count++;
+			                  //$resetLoop=false;
+		              	  }
+		                }elseif(strpos($number_value['number'],strtoupper($search))!== FALSE){
+		                    if($type!=''){
+		                    $filter_number['number']=$number_value['number'];
+		                    $filter_number['price']=$number_value['price'];
+		                    $filter_number['plate_id']=$number_value['plate_id'];
+		                    $filter_number['plate_type']=3;
+			                    if(!isset($filter_data[$number_value['number']])){
+			                    	$filter_data[$number_value['number']]=$filter_number;
+			                	}
+		                    }
+		                }
+	            	}
+	            	$search=substr_replace($search ,"", -1);
+        		}
+        	}
+        	
+        }else{
+            foreach ($number_data as $nkey => $number_value) {
+                if($number_count<99){
+                  $filter_number['number']=$number_value['number'];
+                  $filter_number['price']=$number_value['price'];
+                  $filter_number['plate_id']=$number_value['plate_id'];
+                  $filter_number['plate_type']=3;
+                  if(!isset($filter_data[$number_value['number']])){
+	                  $filter_data[$number_value['number']]=$filter_number;
+	                  $number_count++;
+              	  }
+                }
+            }
+        }
+        return $filter_data;
+    }
+
+    function get_plates_by_details($plate_id,$plate_type)
+    {   
+        $number_data=[];
+        if($plate_type==1){
+            $this->db->select('id,number,plate_id,price');
+            $this->db->from('cherished_plates');
+            $this->db->where('plate_id',$plate_id);
+            $this->db->where('status',1);
+            $this->db->order_by("id");
+            $query=$this->db->get();
+            $data_array=$query->result_array();
+        }elseif($plate_type==2){
+            $this->db->select('id,number,plate_id,price');
+            $this->db->from('prefix_plates');
+            $this->db->where('plate_id',$plate_id);
+            $this->db->where('status',1);
+            $this->db->order_by("id");
+            $query=$this->db->get();
+            $data_array=$query->result_array();
+        }elseif($plate_type==3){
+            $this->db->select('id,number,plate_id,price');
+            $this->db->from('new_plates');
+            $this->db->where('plate_id',$plate_id);
+            $this->db->where('status',1);
+            $this->db->order_by("id");
+            $query=$this->db->get();
+            $data_array=$query->result_array();
+        }
+        foreach ($data_array as $key => $data_array_value) {
+            if($plate_id==$data_array_value['plate_id']){
+                $numbers['number']=$data_array_value['number'];
+                $numbers['price']=$data_array_value['price'];
+                $numbers['plate_id']=$data_array_value['plate_id'];
+                $numbers['plate_type']=$plate_type;
+                $number_data=$numbers;
+            }
+        }
+        return $number_data;
+    }
+
+}

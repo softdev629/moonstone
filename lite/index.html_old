@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Moonstone</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Roboto&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css'>
+
+	
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+
+
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+
+<div class="home homepage">
+
+
+
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+	
+	
+	
+	
+
+    <div id="main-wrapper" class="relative">
+       
+        <div class="page-wrapper mr-0">
+		<header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+			
+				
+			
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                       
+                        
+                        <span>
+                           
+                            <img src="../assets/images/logo-white.svg" alt="homepage" class="dark-logo" />
+                        </span>
+                    </a>
+                </div>
+               
+				
+				<div class="mainMenu">
+					<label for="toggleMenu" class="menuTitle" onclick=""></label>
+					<input type="checkbox" id="toggleMenu" />
+					<ul>
+						<li><a href="buy.html">buy</a></li>
+						<li class="m-line">|</li>
+						<li><a href="sell.html">sell</a></li>
+						<li class="m-line">|</li>
+						<li><a href="help-services.html">help & services</a></li>
+						<li class="m-line">|</li>
+						<li><a href="help-services.html">classic & vintage</a></li>
+						<li class="contactus"><a href="contactus.html">Contact Us</a></li>
+					</ul>
+				</div>
+				
+				
+            </nav>
+        </header>
+           
+            <div class="container-fluid">
+               
+				
+                <div class="row ipadsearch">
+				<div class="col-md-8 col-12 align-self-center">
+				
+				</div>
+                    <div class="col-md-4 col-12 align-self-center">
+                        <div class="h-top-title">
+							<h3>Cherished Private Plates, <strong>Get started from £130</strong></h3>
+						
+						<form class="app-search min-height-sixty">
+								<span class="search-icon">SEARCH</span>
+                                <input type="text" id="myInput" class="form-control " oninput="myFunction()"> 
+                        </form>
+						
+						</div>
+                    </div>
+                    
+                </div>
+			
+                
+                
+                
+             
+            </div>
+			
+			
+			<div class="content-text">
+	
+		<div class="content-text-inn">
+		
+		
+		<div class="content-text-inn-sec">
+			<div class="content-text-inn-sec-inner">
+				<div class="content-text-inn-sec-inner-title">Special</div>
+				<div class="content-text-inn-sec-inner-content">Dual Motor All-Wheel Drive Instantly Controls Traction and Torque, in all weather conditions</div>
+			</div>
+		</div>
+		
+		<div class="content-text-inn-sec">
+			<div class="content-text-inn-sec-inner">
+				<div class="content-text-inn-sec-inner-title">discount</div>
+				<div class="content-text-inn-sec-inner-content">The Quickest SUV on earth-from zero to 60 mph in as little as 2.7 seconds</div>
+			</div>
+		</div>
+		
+		<div class="content-text-inn-sec">
+			<div class="content-text-inn-sec-inner b-none">
+				<div class="content-text-inn-sec-inner-title">
+				<span class="r-star"><img src="../assets/images/white-star.png"/></span>
+				<span class="r-star"><img src="../assets/images/white-star.png"/></span>
+				<span class="r-star"><img src="../assets/images/white-star.png"/></span>
+				<span class="r-star"><img src="../assets/images/white-star.png"/></span>
+				<span class="r-star"><img src="../assets/images/white-star.png"/></span>
+				</div>
+				<div class="content-text-inn-sec-inner-content">The Lowest Probability of Occupant Inquiry of any SUV ever tested by the US</div>
+			</div>
+		</div>
+		
+		
+		</div>	
+		
+		
+	</div>
+           
+        </div>
+		
+		
+		
+		
+       
+	   
+		
+    </div>
+	
+	
+	
+	
+			
+		
+
+
+<span class="video-sec">
+<!-- <span class="n-h-platesec">
+
+<img src="../assets/images/number-plate.png"/>
+
+</span> -->
+
+
+<div class="video-b-section">
+<div class="homcar-shadow">	
+<img src="../assets/images/black-shadow.png" alt="homepage"/>
+</div>
+
+<video class="homcar-video" id="bgvid" playsinline autoplay muted loop>
+<source src="MN1_Video_background.mp4" type="video/mp4">
+</video>
+
+</div>
+
+
+
+
+
+	<div class="bottom-section">
+	
+	<div class="container">
+	
+		<div class="row wow fadeInUp" data-wow-duration="1s">
+			<div class="col-md-12"><h2><span>About</span> Moonstone plates</h2></div>
+		</div>
+		
+		
+		
+			
+		
+		<div class="row">
+			<div class="col-md-4 col-sm-12 r-line wow fadeInUp" data-wow-duration="2s">
+				<div class="bottom-inn-sec-icon">
+				<img src="../assets/images/car-icon.png"/>
+				</div>
+				<div class="bottom-inn-sec">
+				If you wish to have private number plates on your vehicle you must acquire the right to display the new number. This means having the number officially transferred to your vehicle in place of its old number. It is illegal to display a registration number that is NOT the number shown on the vehicle’s V5C and you CANNOT change your registration number by buying plastic number plates and swapping the plates.
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 r-line wow fadeInUp" data-wow-duration="2s">
+			<div class="bottom-inn-sec-icon"><img src="../assets/images/car-icon.png"/></div>
+			<div class="bottom-inn-sec">
+				Additionally, plates must conform to a set of specifications relating to colour; size; reflectivity; decoration and character size, font and spacing.Failing to comply with display regulations can result in MOT failure, a fine and permanent loss of the registration number concerned.
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-duration="2s">
+			<div class="bottom-inn-sec-icon"><img src="../assets/images/car-icon.png"/></div>
+			<div class="bottom-inn-sec">
+				Another consideration when purchasing personalised number plates is the compatibility of the vehicle and the registration number. It is illegal to make an older car look younger with a registration that uses a year code later than the original date of the car. So, for example it is not legal to display a current style ‘19’ number plate on a vehicle that is older than the year 2019 but is legal to display it on 2020 vehicles etc.
+			</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		</div>
+		
+		
+		
+		
+		
+	</div>
+	
+	
+	<div class="bottom-feed-section">
+	<div class="container-fluid">
+	<div class="row wow fadeInDown" data-wow-duration="1s">
+			<div class="col-md-12"><h2 class="insta-post-main-title">Instagram posts</div>
+		</div>
+		<div class="row i-tile">
+			
+			<div class="col-md-3 col-sm-12 wow fadeInRight" data-wow-delay="0.1s">
+				<div class="insta-post-sec">
+					<div class="insta-post-thumb"><img src="../assets/images/t1.jpg"/></div>
+					<div class="insta-post-thumb-bottom">
+						<div class="insta-post-thumb-bottom-left">
+							<div class="insta-id"><div class="insta-id-inn">MT</div></div>
+							<div class="insta-title">
+								<div class="insta-title-text">Jordan Roddy</div>
+								<div class="insta-title-smalltext">@ jordanroddy | <span>2 mins ago</span></div>
+							</div>
+						</div>
+						<div class="insta-post-thumb-bottom-right"><img src="../assets/images/insta-icon.png"/></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3 col-sm-12 wow fadeInRight" data-wow-delay="0.2s">
+				<div class="insta-post-sec">
+					<div class="insta-post-thumb"><img src="../assets/images/t2.jpg"/></div>
+					<div class="insta-post-thumb-bottom">
+						<div class="insta-post-thumb-bottom-left">
+							<div class="insta-id"><div class="insta-id-inn">MT</div></div>
+							<div class="insta-title">
+								<div class="insta-title-text">Jordan Roddy</div>
+								<div class="insta-title-smalltext">@ jordanroddy | <span>2 mins ago</span></div>
+							</div>
+						</div>
+						<div class="insta-post-thumb-bottom-right"><img src="../assets/images/insta-icon.png"/></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3 col-sm-12 wow fadeInRight" data-wow-delay="0.3s">
+				<div class="insta-post-sec">
+					<div class="insta-post-thumb"><img src="../assets/images/t3.jpg"/></div>
+					<div class="insta-post-thumb-bottom">
+						<div class="insta-post-thumb-bottom-left">
+							<div class="insta-id"><div class="insta-id-inn">MT</div></div>
+							<div class="insta-title">
+								<div class="insta-title-text">Jordan Roddy</div>
+								<div class="insta-title-smalltext">@ jordanroddy | <span>2 mins ago</span></div>
+							</div>
+						</div>
+						<div class="insta-post-thumb-bottom-right"><img src="../assets/images/insta-icon.png"/></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3 col-sm-12 wow fadeInRight" data-wow-delay="0.4s">
+				<div class="insta-post-sec">
+					<div class="insta-post-thumb"><img src="../assets/images/t4.jpg"/></div>
+					<div class="insta-post-thumb-bottom">
+						<div class="insta-post-thumb-bottom-left">
+							<div class="insta-id"><div class="insta-id-inn">MT</div></div>
+							<div class="insta-title">
+								<div class="insta-title-text">Jordan Roddy</div>
+								<div class="insta-title-smalltext">@ jordanroddy | <span>2 mins ago</span></div>
+							</div>
+						</div>
+						<div class="insta-post-thumb-bottom-right"><img src="../assets/images/insta-icon.png"/></div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		
+		
+		<div class="row i-tile">
+			
+			<div class="col-md-3 col-sm-12 wow fadeInRight" data-wow-delay="0.5s">
+				<div class="insta-post-sec">
+					<div class="insta-post-thumb"><img src="../assets/images/fp5.png"/></div>
+					<div class="insta-post-thumb-bottom">
+						<div class="insta-post-thumb-bottom-left">
+							<div class="insta-id"><div class="insta-id-inn">MT</div></div>
+							<div class="insta-title">
+								<div class="insta-title-text">Jordan Roddy</div>
+								<div class="insta-title-smalltext">@ jordanroddy | <span>2 mins ago</span></div>
+							</div>
+						</div>
+						<div class="insta-post-thumb-bottom-right"><img src="../assets/images/insta-icon.png"/></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3 col-sm-12 wow fadeInRight" data-wow-delay="0.6s">
+				<div class="insta-post-sec">
+					<div class="insta-post-thumb"><img src="../assets/images/fp6.png"/></div>
+					<div class="insta-post-thumb-bottom">
+						<div class="insta-post-thumb-bottom-left">
+							<div class="insta-id"><div class="insta-id-inn">MT</div></div>
+							<div class="insta-title">
+								<div class="insta-title-text">Jordan Roddy</div>
+								<div class="insta-title-smalltext">@ jordanroddy | <span>2 mins ago</span></div>
+							</div>
+						</div>
+						<div class="insta-post-thumb-bottom-right"><img src="../assets/images/insta-icon.png"/></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3 col-sm-12 wow fadeInRight" data-wow-delay="0.7s">
+				<div class="insta-post-sec">
+					<div class="insta-post-thumb"><img src="../assets/images/fp7.png"/></div>
+					<div class="insta-post-thumb-bottom">
+						<div class="insta-post-thumb-bottom-left">
+							<div class="insta-id"><div class="insta-id-inn">MT</div></div>
+							<div class="insta-title">
+								<div class="insta-title-text">Jordan Roddy</div>
+								<div class="insta-title-smalltext">@ jordanroddy | <span>2 mins ago</span></div>
+							</div>
+						</div>
+						<div class="insta-post-thumb-bottom-right"><img src="../assets/images/insta-icon.png"/></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-3 col-sm-12 wow fadeInRight" data-wow-delay="0.8s">
+				<div class="insta-post-sec">
+					<div class="insta-post-thumb"><img src="../assets/images/fp8.png"/></div>
+					<div class="insta-post-thumb-bottom">
+						<div class="insta-post-thumb-bottom-left">
+							<div class="insta-id"><div class="insta-id-inn">MT</div></div>
+							<div class="insta-title">
+								<div class="insta-title-text">Jordan Roddy</div>
+								<div class="insta-title-smalltext">@ jordanroddy | <span>2 mins ago</span></div>
+							</div>
+						</div>
+						<div class="insta-post-thumb-bottom-right"><img src="../assets/images/insta-icon.png"/></div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		
+		
+		
+		</div>
+		
+		
+		
+		<div class="bottom-footer-section">
+	<footer class="footer text-center">
+	
+	<div class="footer-top">
+		<div class="row">
+			<div class="col-md-3 col-sm-12 wow fadeInUp foot-intro" data-wow-delay="0.2s">
+				<div class="f-about">
+					<div class="f-about-logo"><img src="../assets/images/logo-black.svg"></div>
+					<div class="f-about-cont">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum is simply dummy text of the printing and typesetting.</div>
+					<a href="#">Readmore</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-12 r-line wow fadeInUp" data-wow-delay="0.3s">
+				
+				<div class="f-about-links">
+					<h2>About Us</h2>
+					<ul>
+						<li><a href="buy.html">Buy</a></li>
+						<li><a href="sell.html">Sell</a></li>
+						<li><a href="help-services.html">help & Services</a></li>
+						<li><a href="help-services.html">classic & vintage</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-12 r-line wow fadeInUp" data-wow-delay="0.4s">
+			
+			<div class="f-about-links">
+					<h2>recent posts</h2>
+					
+					<div class="f-post-sec">
+					
+						<div class="f-post">
+							<div class="f-post-left"><img src="../assets/images/fp1.png"></div>
+							<div class="f-post-right">
+								<div class="f-post-right-con">A Week Long South American Adventures</div>
+								<div class="f-post-right-time-sec"><img src="../assets/images/time-icon.png"> June 26. 20120</div>
+							</div>
+						</div>
+						
+						<div class="f-post">
+							<div class="f-post-left"><img src="../assets/images/fp2.png"></div>
+							<div class="f-post-right">
+								<div class="f-post-right-con">A Week Long South American Adventures</div>
+								<div class="f-post-right-time-sec"><img src="../assets/images/time-icon.png"> June 26. 20120</div>
+							</div>
+						</div>
+						
+						<div class="f-post bb-none">
+							<div class="f-post-left"><img src="../assets/images/fp3.png"></div>
+							<div class="f-post-right">
+								<div class="f-post-right-con">A Week Long South American Adventures</div>
+								<div class="f-post-right-time-sec"><img src="../assets/images/time-icon.png"> June 26. 20120</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+			
+			</div>
+			<div class="col-md-3 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+			
+			<div class="follow-us-sec">
+				<h2>Follow us</h2>
+				<div class="follow-us-sec-con">Don’t forgot to keep in touch by following us via social media.</div>
+				<div class="follow-social-sec">
+					<a href="#"><img src="../assets/images/t-icon.png"></a>
+					<a href="#"><img src="../assets/images/f-icon.png"></a>
+					<a href="#"><img src="../assets/images/g-p-icon.png"></a>
+				</div>
+				<div class="follow-subscribe-sec">
+					<div class="follow-subscribe-sec-title">Subscribe to my newsletter</div>
+					<input type="text" placeholder="Enter your email address" class="form-control">
+					<a href="#" class="subscribe">Subscribe</a>
+				</div>
+			</div>
+			
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer-bottom">
+	<div class="row">
+	<div class="col-md-12">
+		<div class="copyright">Copyright© 2020 moonstoneplate. All rights reserved. </div>
+				<div class="footer-link"><a href="#">Terms  & conditions</a>  |  <a href="#">privacy policy</a></div>
+	</div>
+	</div>
+	</div>
+	
+	
+				
+    </footer>
+	</div>
+	</div>
+	
+	
+
+	
+
+	</div>
+	
+	
+
+  
+	
+    <!-- Bootstrap tether Core JavaScript -->
+	<script src="./js/jquery.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+	
+	<!--stickey kit -->
+    <script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+	
+	
+  
+    <!--Custom JavaScript -->
+    <script src="js/custom.js"></script>
+   
+
+
+	
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+	<script>
+		(function($){
+			$(window).on("load",function(){
+				
+				$("#myModal .modal-body").mCustomScrollbar({
+					setHeight:300,
+					theme:"minimal-dark"
+				});
+				
+				$("#accordion .panel-body").mCustomScrollbar({
+					setHeight:260,
+					theme:"dark-3"
+				});
+				
+				$("#myTab .tab-pane").mCustomScrollbar({
+					setHeight:240,
+					theme:"inset-2-dark"
+				});
+				
+				$('.carousel').carousel('pause');
+				
+			});
+		})(jQuery);
+	</script>
+	
+
+
+
+<script  src="js/animation.js"></script>
+
+</body>
+
+</html>

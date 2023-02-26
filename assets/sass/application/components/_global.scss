@@ -1,0 +1,80 @@
+// main: ../../../css/styles.scss
+
+html {
+
+    font-size             : 10px;
+    font-family           : $base-font-family;
+    font-weight           : $base-font-weight;
+    line-height           : 1.15;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position              : relative;
+    height                : 100%;
+}
+
+body {
+  background: $bkg-color;
+  color: $text-color;
+}
+
+.clear {
+    clear  : both;
+    display: block;
+    width  : 100%;
+    height : 0;
+}
+
+a {
+  outline: none !important
+}
+
+img {
+  max-width: 100%
+}
+
+.img-as-bg {
+    background-position: center;
+    background-size    : cover;
+
+    img {
+        display: none;
+    }
+}
+
+.border-top {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+
+.nplate {
+  background-image: url('../img/np-img.jpg');
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  border-radius: 10px;
+  background-color: #E6CC00;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+
+.page {
+  min-height: calc(100vh - 92px - 112.46px - 100px;);
+}
+
+.black-panel {
+  background-color: rgba(0,0,0,0.9);
+}
